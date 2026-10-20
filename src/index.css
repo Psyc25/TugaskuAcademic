@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom styles and smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #07080D;
+  color: #ECF0F8;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+body.light .grid-tex {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+}
+
+/* Light theme style overrides for hardcoded tailwind color classes */
+body.light .bg-\[\#07080D\],
+body.light .bg-\[\#07080D\]\/80 {
+  background-color: #F8FAFC !important;
+}
+
+body.light .bg-\[\#0C0E18\],
+body.light .bg-\[\#0C0E18\]\/60 {
+  background-color: #FFFFFF !important;
+}
+
+body.light .bg-\[\#111420\],
+body.light .bg-\[\#111420\]\/90,
+body.light .bg-\[\#111420\]\/80,
+body.light .bg-\[\#111420\]\/60,
+body.light .bg-\[\#111420\]\/40 {
+  background-color: #F1F5F9 !important;
+}
+
+body.light .bg-\[\#121626\],
+body.light .bg-\[\#121626\]\/80,
+body.light .bg-\[\#121626\]\/60 {
+  background-color: #E2E8F0 !important;
+}
+
+body.light .bg-\[\#181C2A\] {
+  background-color: #F1F5F9 !important;
+}
+
+body.light .bg-\[\#101321\] {
+  background-color: #E2E8F0 !important;
+}
+
+body.light .bg-\[\#141829\] {
+  background-color: #E2E8F0 !important;
+}
+
+body.light .bg-\[\#080911\] {
+  background-color: #F8FAFC !important;
+}
+
+body.light .bg-\[\#0D0F1A\] {
+  background-color: #FFFFFF !important;
+}
+
+body.light .bg-white\/\[0\.02\] {
+  background-color: rgba(15, 23, 42, 0.02) !important;
+}
+
+body.light .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+body.light .bg-white\/10 {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Borders */
+body.light .border-white\/5 {
+  border-color: #E2E8F0 !important;
+}
+
+body.light .border-white\/10 {
+  border-color: #CBD5E1 !important;
+}
+
+body.light .border-white\/15 {
+  border-color: #CBD5E1 !important;
+}
+
+body.light .border-white\/20 {
+  border-color: #94A3B8 !important;
+}
+
+body.light .border-white\/30 {
+  border-color: #64748B !important;
+}
+
+/* Divide colors */
+body.light .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #E2E8F0 !important;
+}
+
+body.light .divide-white\/10 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #CBD5E1 !important;
+}
+
+/* Hover effects */
+body.light .hover\:bg-white\/5:hover {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+body.light .hover\:bg-white\/10:hover {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+body.light .hover\:bg-white\/\[0\.03\]:hover {
+  background-color: rgba(15, 23, 42, 0.03) !important;
+}
+
+body.light .hover\:border-white\/10:hover {
+  border-color: #CBD5E1 !important;
+}
+
+body.light .hover\:border-white\/20:hover {
+  border-color: #94A3B8 !important;
+}
+
+/* Text Colors */
+body.light .text-white {
+  color: #0F172A !important;
+}
+
+body.light .text-white\/90 {
+  color: #1E293B !important;
+}
+
+body.light .text-white\/80 {
+  color: #334155 !important;
+}
+
+body.light .text-white\/70 {
+  color: #475569 !important;
+}
+
+body.light .text-white\/60 {
+  color: #475569 !important;
+}
+
+body.light .text-white\/50 {
+  color: #64748B !important;
+}
+
+body.light .text-white\/40 {
+  color: #64748B !important;
+}
+
+body.light .text-white\/30 {
+  color: #94A3B8 !important;
+}
+
+body.light .text-white\/20 {
+  color: #CBD5E1 !important;
+}
+
+body.light .text-\[\#ECF0F8\] {
+  color: #0F172A !important;
+}
+
+body.light .text-\[\#CDD5E0\] {
+  color: #334155 !important;
+}
+
+body.light .text-\[\#8B94AA\] {
+  color: #475569 !important;
+}
+
+/* Placeholders */
+body.light input::placeholder,
+body.light textarea::placeholder {
+  color: #94A3B8 !important;
+}
+
+body.light .placeholder-white\/20::placeholder {
+  color: #94A3B8 !important;
+}
+
+body.light .placeholder-white\/25::placeholder {
+  color: #94A3B8 !important;
+}
+
+/* Exception overrides for filled colored text or green text so they remain legible and look stunning */
+body.light .text-\[\#00E57A\] {
+  color: #059669 !important; /* Rich green for light mode contrast */
+}
+
+body.light .border-\[\#00E57A\]\/25,
+body.light .border-\[\#00E57A\]\/30,
+body.light .border-\[\#00E57A\]\/20,
+body.light .border-\[\#00E57A\]\/15,
+body.light .border-\[\#00E57A\]\/10 {
+  border-color: #059669 !important;
+}
+
+body.light .bg-\[\#00E57A\]\/10,
+body.light .bg-\[\#00E57A\]\/5,
+body.light .bg-\[\#00E57A\]\/15 {
+  background-color: rgba(5, 150, 105, 0.08) !important;
+}
+
+body.light .bg-\[\#00E57A\] {
+  background-color: #00E57A !important;
+}
+
+body.light .bg-\[\#00E57A\] .text-black,
+body.light .bg-\[\#00E57A\] span,
+body.light .bg-\[\#00E57A\] svg {
+  color: #000000 !important;
+}
+
+/* Keep actual text-black black */
+body.light .text-black {
+  color: #000000 !important;
+}
+
+/* Ensure shadow/drop shadow adapts */
+body.light #hero-bg-glow {
+  background-image: linear-gradient(to top right, rgba(0, 229, 122, 0.08), rgba(56, 189, 248, 0.08)) !important;
+}
+
+body.light ::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+body.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+}
+
+.grid-tex {
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* Custom Webkit scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07080D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2333;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
